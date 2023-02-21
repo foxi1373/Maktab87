@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/first_to_second"
+    app:startDestination="@id/firstFragment2">
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.myquizat02ofisfand.SecondFragment"
+        android:label="SecondFragment" >
+        <argument
+            android:name="sent"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment2"
+        android:name="com.example.myquizat02ofisfand.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment2_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+</navigation>
